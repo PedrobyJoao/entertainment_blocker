@@ -7,3 +7,7 @@ so I just rushed it.
 
 The code organization and UI are quite (aka very) bad but I won't put efforts to improve it now
 as I just needed something functional and working as expected.
+
+## TODOs
+- Popup on the same tab
+- Remove youtube feed
