@@ -6,8 +6,10 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                 url: chrome.runtime.getURL('popup.html'),
                 active: true
             });
-        } else if (tab.url.includes("reddit.com")) {
+        } else if (tab.url.includes("youtube.com")) {
             chrome.tabs.create({ url: chrome.runtime.getURL('confirm.html') + "#" + tabId });
         }
+        } else if (tab.url.includes("reddit.com")) {
+            chrome.tabs.create({ url: chrome.runtime.getURL('confirm.html') + "#" + tabId });
     }
 });
