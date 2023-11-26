@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Poor Entertainment Blocker",
+    "version": "1.0",
+    "description": "Blocks specified entertainment sites.",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "*://*.youtube.com/*",
+        "*://*.reddit.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["popup.html", "popup.js", "confirm.html", "confirm.js"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
