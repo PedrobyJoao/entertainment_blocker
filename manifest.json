@@ -4,23 +4,24 @@
     "version": "1.0",
     "description": "Blocks specified entertainment sites.",
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "js/background.js"
     },
     "permissions": [
         "tabs",
+        "sessions",
         "activeTab",
         "*://*.youtube.com/*",
         "*://*.reddit.com/*"
     ],
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "js/background.js"
     },
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "html/popup.html"
     },
     "web_accessible_resources": [
         {
-            "resources": ["popup.html", "popup.js", "confirm.html", "confirm.js"],
+            "resources": ["html/popup.html", "js/popup.js", "html/confirm.html", "js/confirm.js"],
             "matches": ["<all_urls>"]
         }
     ]
