@@ -8,10 +8,8 @@
     },
     "permissions": [
         "tabs",
-        "sessions",
-        "activeTab",
-        "*://*.youtube.com/*",
-        "*://*.reddit.com/*"
+        "*://youtube.com/*",
+        "*://reddit.com/*"
     ],
     "background": {
         "service_worker": "js/background.js"
@@ -22,7 +20,7 @@
     "web_accessible_resources": [
         {
             "resources": ["html/popup.html", "js/popup.js", "html/confirm.html", "js/confirm.js"],
-            "matches": ["<all_urls>"]
+            "matches": ["*://youtube.com/*", "*://reddit.com/*"]
         }
     ]
 }

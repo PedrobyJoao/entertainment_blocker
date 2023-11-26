@@ -1,5 +1,5 @@
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (changeInfo.status === 'complete') {
+    if (changeInfo.status === 'loading') {
         if (tab.url.includes("youtube.com/shorts/")) {
             chrome.tabs.remove(tabId);
             chrome.tabs.create({
